@@ -49,5 +49,21 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSPhotoLibraryUsageDescription</key>
+    <string>This app needs access to your photo library to allow content sharing.</string>
+
+    <key>NSCameraUsageDescription</key>
+    <string>This app needs access to your camera to allow photo capture for sharing.</string>
+
+    <!-- 🔗 To allow opening third-party apps like WhatsApp, Instagram, etc. -->
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+      <string>whatsapp</string>
+      <string>instagram</string>
+      <string>fb</string>
+      <string>twitter</string>
+      <string>mailto</string>
+      <string>tel</string>
+    </array>
 </dict>
 </plist>

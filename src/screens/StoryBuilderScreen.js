@@ -158,6 +158,7 @@ const StoryBuilderScreen = () => {
                     {Object.keys(generatedElements).map(categoryKey => {
                         const element = generatedElements[categoryKey];
                         if (element) {
+                            console.log("elementL: ", element.name)
                             return (
                                 <View key={categoryKey} style={styles.generatedElementCard}>
                                     <View style={styles.generatedElementContent}>
@@ -171,10 +172,7 @@ const StoryBuilderScreen = () => {
                                             </Text>
                                             <Text style={styles.elementName}>{element.name}</Text>
                                         </View>
-                                        {/* Optional: Regenerate single element button */}
-                                        {/* <TouchableOpacity onPress={() => generateStoryIdea(categoryKey)} style={styles.regenerateButton}>
-                                            <Image source={require('../assets/img/refresh_icon.png')} style={styles.regenerateIcon} />
-                                        </TouchableOpacity> */}
+
                                     </View>
                                 </View>
                             );
@@ -308,7 +306,8 @@ const styles = StyleSheet.create({
         fontFamily: 'Roboto-Bold',
     },
     generatedElementCard: {
-        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+        // ИЗМЕНЕНИЕ ЗДЕСЬ:
+        backgroundColor: 'rgba(50, 50, 50, 0.7)', // Более темный серый с прозрачностью для лучшего контраста
         borderRadius: 15,
         padding: 15,
         marginBottom: 15,
@@ -338,7 +337,7 @@ const styles = StyleSheet.create({
         marginRight: 15,
     },
     elementTextContainer: {
-        flex: 1,
+        // flex: 1,
     },
     elementCategoryTitle: {
         color: 'rgba(255, 255, 255, 0.7)',
